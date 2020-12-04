@@ -1,6 +1,6 @@
 #use-added-syntax(esir)
-; Part number TLV75533PDRVR
-defpackage glasgow/TLV75533PDRVR :
+; Part number TLV73312PDRVR
+defpackage glasgow/TLV73312PDRVR :
   import core
   import collections
   import math
@@ -19,7 +19,7 @@ defpackage glasgow/TLV75533PDRVR :
   import ocdb/pinspec
   import ocdb/box-symbol
 
-pcb-package wson-7-drv0006a-pkg :
+pcb-package wson-7-drv0006b-pkg :
   pad p[1] : {smd-pad(0.3, 0.35)} at loc(-0.9, 0.65, 0.0)
   pad p[2] : {smd-pad(0.3, 0.35)} at loc(-0.9, 0.0, 0.0)
   pad p[3] : {smd-pad(0.3, 0.35)} at loc(-0.9, -0.65, 0.0)
@@ -32,7 +32,7 @@ pcb-package wson-7-drv0006a-pkg :
   layer(Silkscreen("F-SilkS", Top)) = Line(0.12, [ Point(-1.17, 1.29), Point(-1.17, 1.05) ])
   ref-label()
 
-pcb-symbol TLV75533PDRVR-symbol :
+pcb-symbol TLV73312PDRVR-symbol :
   pin EN at Point(-7.62, 0.0) with :
     direction = Left
     length = 2.54
@@ -68,7 +68,7 @@ pcb-symbol TLV75533PDRVR-symbol :
   layer("foreground") = Text(">VALUE", 0.762, SW, loc(-2.5, 0.0))
   layer("foreground") = Text(">REF", 0.762, SW, loc(-2.5, 2.0))
 
-public pcb-component TLV75533PDRVR :
+public pcb-component TLV73312PDRVR :
   pin OUT
   pin NC1
   pin GND
@@ -85,33 +85,56 @@ public pcb-component TLV75533PDRVR :
     [IN | 6]
 
   ; make-box-symbol(pinspec)
-  symbol = TLV75533PDRVR-symbol(EN => EN, GND => GND, IN => IN, OUT => OUT, NC1 => NC1, NC2 => NC2)
-  assign-package(wson-7-drv0006a-pkg, pinspec)
+  symbol = TLV73312PDRVR-symbol(EN => EN, GND => GND, IN => IN, OUT => OUT, NC1 => NC1, NC2 => NC2)
+  assign-package(wson-7-drv0006b-pkg, pinspec)
   name = "Package_DFN_QFN:UDFN-6-1EP_2.1x2.1mm_P0.8mm"
   description = "7-pin WSON EP package"
-  mpn = "TLV75533PDRVR"
+  mpn = "TLV73312PDRVR"
 
   spice :
-    "MSW {IN} VGEN VSW VSW MOSEN"
-    "MCL VSW VCL VCL VCL MOSCL"
-    "MREG VCL {GND} {OUT} {OUT} MOSREG"
-    "M4 VNEN {EN} VUVLO VUVLO MOSLOGN"
-    "M7 VUVLO {IN} {GND} {GND} MOSUVLO"
-    "M6 VFEN VNEN {GND} {GND} MOSLOGN"
-    "M5 VFEN VNEN {IN} {IN} MOSLOGP"
-    "D1 {OUT} {IN} SUBSTRATE"
-    "C2 VCL {GND} 1000p"
-    "C3 VNEN {GND} 100f"
-    "C5 VGEN {GND} 20p"
-    "C6 VUVLO {GND} 100f"
-    "C7 VSW {GND} 100p"
-    "R2 {IN} VNEN 1MEG"
-    "R3 VFEN VGEN 10MEG"
-    "CCL VCL {GND} 1n"
-    ".model MOSREG  NMOS LEVEL=1 RD=1e-3 RS=1e-3 VTO=-3.3   KP=1000"
-    ".model MOSCL   NMOS LEVEL=1 RD=1e-3 RS=1e-3 VTO=-75e-3 KP=256"
-    ".model MOSEN   NMOS LEVEL=1 RD=1e-3 RS=1e-3 VTO=25e-3  KP=1000"
-    ".model MOSLOGN NMOS LEVEL=1 RD=10   RS=10   VTO=0.8    KP=1000u"
-    ".model MOSLOGP PMOS LEVEL=1 RD=10   RS=10   VTO=-0.3   KP=200u"
-    ".model MOSUVLO NMOS LEVEL=1 RD=10   RS=10   VTO=1.3    KP=500u"
-    ".model SUBSTRATE D RS=0.01 N=1.5"
+    "M1 {IN} N001 VSW VSW mosen"
+    "M2 VSW VCL VCL VCL moscl"
+    "M3 VCL {GND} {OUT} {OUT} mosreg"
+    "C2 N003 {GND} 100pF"
+    "M4 VNEN {EN} {GND} {GND} moslogn"
+    "C3 VNEN {GND} 100fF"
+    "C5 N001 {GND} 1.5pF"
+    "R2 {IN} VNEN 1Meg"
+    "M7 VUVLO {IN} {GND} {GND} mosuvlo"
+    "C6 VUVLO {GND} 100fF"
+    "C7 N002 {GND} 100pF"
+    "D1 {OUT} {IN} substrate"
+    "R5 {IN} VUVLO 1Meg"
+    "M11 VNUVLO VUVLO {IN} {IN} moslogp"
+    "M12 VNUVLO VUVLO {GND} {GND} moslogn"
+    "M5 VFEN VNEN {IN} {IN} moslogp"
+    "M6 VFEN VNEN {GND} {GND} moslogn"
+    "M9 N005 VNUVLO {GND} {GND} moslogn"
+    "M10 N004 VFEN N005 N005 moslogn"
+    "M13 N004 VNUVLO {IN} {IN} moslogp"
+    "M14 N004 VFEN {IN} {IN} moslogp"
+    "M15 VFEN N001 N001 N001 softstart"
+    "C8 VNUVLO {GND} 2pF"
+    "C9 VFEN {GND} 2pF"
+    "C10 N004 {GND} 100pF"
+    "D2 {EN} {IN} inpprotect"
+    "D3 {GND} {EN} inpprotect"
+    "D4 {GND} {OUT} outprotect"
+    "R3 {IN} {EN} 10Meg"
+    "R6 VENS {EN} 50"
+    "M16 N003 N004 {GND} {GND} mosacti"
+    "R7 VCL N003 240"
+    "M17 N002 N004 {GND} {GND} mosacti"
+    "R8 VSW N002 240"
+    ".model mosreg NMOS LEVEL=1 RD=200m RS=10m VTO=-1.2 KP=1000"
+    ".model moscl NMOS LEVEL=1 RD=200m RS=10m VTO=-75m KP=180"
+    ".model mosen NMOS LEVEL=1 RD=200m RS=10m VTO=25m KP=1000"
+    ".model moslogn NMOS LEVEL=1 RD=40 RS=40 VTO=0.8 KP=100u"
+    ".model moslogp PMOS LEVEL=1 RD=40 RS=40 VTO=-0.3 KP=20u"
+    ".model mosuvlo NMOS LEVEL=1 RD=10 RS=10 VTO=1.3 KP=50u"
+    ".model substrate D RS=.01 N=1.5"
+    ".model inpprotect D RS=1 N=1 IS=1e-6"
+    ".model outprotect D RS=0.1 N=1 BV=3.6 IBV=10u"
+    ".model softstart NMOS LEVEL=1 RD=10 RS=10 VTO=-75m KP=2u"
+    ".model mosacto NMOS LEVEL=1 RD=119 RS=1 VTO=25m KP=100"
+    ".model mosacti NMOS LEVEL=1 RD=4 RS=1 VTO=25m KP=1"
