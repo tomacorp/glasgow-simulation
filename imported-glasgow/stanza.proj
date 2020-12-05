@@ -1,4 +1,4 @@
-
+package glasgow/LM3880 defined-in "LM3880.stanza"
 package glasgow/TPD3S014DBVR defined-in "TPD3S014DBVR.stanza"
 package glasgow/TLV75533PDRVR defined-in "TLV75533PDRVR.stanza"
 package glasgow/TLV73312PDRVR defined-in "TLV73312PDRVR.stanza"
@@ -19,7 +19,6 @@ package glasgow/testpoint-pad-d1-0mm defined-in "testpoint-pad-d1-0mm.stanza"
 package glasgow/LED defined-in "LED.stanza"
 package glasgow/Conn_01x02 defined-in "Conn_01x02.stanza"
 package glasgow/Conn_01x03 defined-in "Conn_01x03.stanza"
-package glasgow/LM3880 defined-in "LM3880.stanza"
 package glasgow/TPS73601DBV defined-in "TPS73601DBV.stanza"
 package glasgow/ICE40HX8K-BG121 defined-in "ICE40HX8K-BG121.stanza"
 package glasgow/fiducial-0-75mm-dia-1-5mm-outer defined-in "fiducial-0-75mm-dia-1-5mm-outer.stanza"

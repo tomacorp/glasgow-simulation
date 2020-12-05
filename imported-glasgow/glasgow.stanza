@@ -20,7 +20,6 @@ defpackage glasgow :
 
   import glasgow/R_Pack08
   import glasgow/R
-  import glasgow/LM3880
   import glasgow/TPD3S014DBVR
   import glasgow/Conn_01x02
   import glasgow/udfn-18-3ep-5-5x1-5mm-p0-5mm-ep0-5x0-5mm

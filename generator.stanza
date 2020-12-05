@@ -51,6 +51,10 @@ pcb-module glasgow :
   inst C27 : {glasgow/c-0402-1005metric/c-0402-1005metric("C28", 4.7e-6, 6.3, 10.0, "0603")}
   inst R8 : {gen-res-cmp(100.0e3, 1.0, "0402")}
   inst U36 : {glasgow/TLV73312PDRVR/TLV73312PDRVR}
+  ; The file with the extra calls to LM3880 is imported-glasgow/glasgow.stanza
+  inst U7 : {glasgow/LM3880/LM3880}
+  inst R5 : {gen-res-cmp(24.3e3, 1.0, "0402")}
+  inst R6 : {gen-res-cmp(10.0e3, 1.0, "0402")}
   ; C13 gets a capacitor symbol using gen-cap-cmp.
   ; C13 is 0402 0.1uF TMK105BJ104KV-F 25V X5R 10% 0.5mm thick 
   ;   gen-cap-cmp arguments are capacitance, tolerance, voltage rating, English package size.
@@ -59,13 +63,14 @@ pcb-module glasgow :
   net USB_N (J1.p[2], U15.D1)
   net USB_P (J1.p[3], U15.D2)
   net USB_NC (J1.p[4])
-  net GND (C13.p[2], J1.p[5], U15.GND, C8.p[2], C26.p[2], C28.p[2], U8.GND, C86.p[2], U36.GND, C27.p[2])
+  net GND (C13.p[2], J1.p[5], U15.GND, C8.p[2], C26.p[2], C28.p[2], U8.GND, C86.p[2], U36.GND, C27.p[2], R6.p[2], U7.GND)
   net SHLD (C13.p[1], J1.p[6])
-  net P5V (U15.OUT, C26.p[1], U8.IN, U8.NC2, U36.IN, U36.NC2, R7.p[2], R8.p[1], C86.p[1])
+  net P5V (U15.OUT, C26.p[1], U8.IN, U8.NC2, U36.IN, U36.NC2, R7.p[2], R8.p[1], C86.p[1], R5.p[1], U7.VCC)
   net P3R3V (U8.OUT, U8.NC1, C28.p[1])
   net P1R2V (U36.OUT, U36.NC1, C27.p[1])
-  net P3V3EN (U8.EN, R7.p[1])
-  net P1V2EN (U36.EN, R8.p[1])
+  net P3V3EN (U8.EN, R7.p[1], U7.FLAG2)
+  net P1V2EN (U36.EN, R8.p[2], U7.FLAG1)
+  net PGOOD (R5.p[2], R6.p[1], U7.EN)
 
   symbol(GND) = {ocdb/symbols/ground-sym}
 
