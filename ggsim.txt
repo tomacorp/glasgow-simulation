@@ -1,0 +1,166 @@
+
+Circuit: jitpcb-generated-spice 
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Warning: v.xj1.v1: no DC value, transient time 0 value used
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vusb                                         0
+usb_p                              1.94989e-30
+usb_n                              1.94989e-30
+shld                                         0
+usb_nc                                       0
+p5v                                3.89959e-25
+p3r3v                                8.613e-20
+xu8.vgen                           3.01706e-22
+xu8.vsw                              8.613e-20
+xu8.vcl                              8.613e-20
+xu8.vnen                           3.89957e-25
+p3v3en                             3.89958e-25
+xu8.vuvlo                          3.01706e-22
+xu8.vfen                           3.01706e-22
+p1r2v                              1.31001e-19
+xu36.n001                         -6.26571e-22
+xu36.vsw                           1.31001e-19
+xu36.vcl                           1.31001e-19
+xu36.n003                          1.31001e-19
+xu36.vnen                          3.89955e-25
+p1v2en                             7.95669e-19
+xu36.vuvlo                         3.89955e-25
+xu36.n002                          1.31001e-19
+xu36.vnuvlo                       -4.12392e-22
+xu36.vfen                         -6.26571e-22
+xu36.n005                         -2.53299e-20
+xu36.n004                         -5.05548e-20
+xu36.vens                          7.95669e-19
+xu7.vni                            2.41431e-25
+pgood                              8.89653e-26
+xu7.vsdp                           1.81995e-25
+xu7.vnp                            2.41431e-25
+xu7.vzref                          3.89959e-25
+xu7.ena                            2.12217e-25
+xu7.enb                            2.12217e-25
+xu7.vsg                             8.3882e-26
+xu7.vcmp                           1.96902e-19
+xu7.vrgo                           1.96902e-19
+xu7.vramp                           -3.996e-19
+xu7.n003                           3.72782e-25
+xu7.vrgi                           1.96903e-19
+xu7.vdrmp                          1.96903e-19
+xu7.vnia                           2.41431e-25
+xu7.vsdpa                          1.81995e-25
+xu7.vnpa                           2.41431e-25
+xu7.vzrefa                         3.89959e-25
+xu7.enaa                           2.12217e-25
+xu7.enba                           2.12217e-25
+xu7.vsga                            8.3882e-26
+74502                             -6.07417e-20
+xu7.vnib                           2.41431e-25
+xu7.vsdpb                          1.81995e-25
+xu7.vnpb                           2.41431e-25
+xu7.vzrefb                         3.89959e-25
+xu7.enbb                           2.12217e-25
+xu7.enab                           2.12217e-25
+xu7.vsgb                            8.3882e-26
+xu7.vnic                           2.41431e-25
+xu7.vsdpc                          1.81995e-25
+xu7.vnpc                           2.41431e-25
+xu7.vzrefc                         3.89959e-25
+xu7.enac                           2.12217e-25
+xu7.n001                           2.12217e-25
+xu7.vsgc                            8.3882e-26
+v.xj1.v1#branch                    4.02019e-24
+
+
+
+No. of Data Rows : 20049
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Warning: v.xj1.v1: no DC value, transient time 0 value used
+No. of Data Columns : 483  
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vusb                                         0
+usb_p                              1.94989e-30
+usb_n                              1.94989e-30
+shld                                         0
+usb_nc                                       0
+p5v                                3.89959e-25
+p3r3v                                8.613e-20
+xu8.vgen                           3.01706e-22
+xu8.vsw                              8.613e-20
+xu8.vcl                              8.613e-20
+xu8.vnen                           3.89957e-25
+p3v3en                             3.89958e-25
+xu8.vuvlo                          3.01706e-22
+xu8.vfen                           3.01706e-22
+p1r2v                              1.31001e-19
+xu36.n001                         -6.26571e-22
+xu36.vsw                           1.31001e-19
+xu36.vcl                           1.31001e-19
+xu36.n003                          1.31001e-19
+xu36.vnen                          3.89955e-25
+p1v2en                             7.95669e-19
+xu36.vuvlo                         3.89955e-25
+xu36.n002                          1.31001e-19
+xu36.vnuvlo                       -4.12392e-22
+xu36.vfen                         -6.26571e-22
+xu36.n005                         -2.53299e-20
+xu36.n004                         -5.05548e-20
+xu36.vens                          7.95669e-19
+xu7.vni                            2.41431e-25
+pgood                              8.89653e-26
+xu7.vsdp                           1.81995e-25
+xu7.vnp                            2.41431e-25
+xu7.vzref                          3.89959e-25
+xu7.ena                            2.12217e-25
+xu7.enb                            2.12217e-25
+xu7.vsg                             8.3882e-26
+xu7.vcmp                           1.96902e-19
+xu7.vrgo                           1.96902e-19
+xu7.vramp                           -3.996e-19
+xu7.n003                           3.72782e-25
+xu7.vrgi                           1.96903e-19
+xu7.vdrmp                          1.96903e-19
+xu7.vnia                           2.41431e-25
+xu7.vsdpa                          1.81995e-25
+xu7.vnpa                           2.41431e-25
+xu7.vzrefa                         3.89959e-25
+xu7.enaa                           2.12217e-25
+xu7.enba                           2.12217e-25
+xu7.vsga                            8.3882e-26
+74502                             -6.07417e-20
+xu7.vnib                           2.41431e-25
+xu7.vsdpb                          1.81995e-25
+xu7.vnpb                           2.41431e-25
+xu7.vzrefb                         3.89959e-25
+xu7.enbb                           2.12217e-25
+xu7.enab                           2.12217e-25
+xu7.vsgb                            8.3882e-26
+xu7.vnic                           2.41431e-25
+xu7.vsdpc                          1.81995e-25
+xu7.vnpc                           2.41431e-25
+xu7.vzrefc                         3.89959e-25
+xu7.enac                           2.12217e-25
+xu7.n001                           2.12217e-25
+xu7.vsgc                            8.3882e-26
+v.xj1.v1#branch                    4.02019e-24
+
+
+No. of Data Rows : 20049
+CPU time since last call: 15.765 seconds.
+
+Total CPU time: 15.766 seconds.
+
+Current dynamic memory usage = 0 bytes,
+Dynamic memory limit = 8796093017954.972656 MB.
+

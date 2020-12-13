@@ -1,0 +1,18 @@
+;Use the following syntax to use a part for a set of instances.
+;use "SKU-NUMBER" from "VENDOR" for ("U0", "U1", "U3")
+
+;The following lines are examples created by just selecting the first in-stock item on Octopart. Just uncomment the lines if you wish to use them.
+;use "296-38835-1-ND" from "Digi-Key" for ("U2")
+;use "296-51807-1-ND" from "Digi-Key" for ("U3")
+;use "SKU-NUMBER" from "VENDOR" for ("R2")
+;use "SKU-NUMBER" from "VENDOR" for ("R4", "R3")
+;use "SKU-NUMBER" from "VENDOR" for ("U4")
+;use "SKU-NUMBER" from "VENDOR" for ("R1")
+;use "SKU-NUMBER" from "VENDOR" for ("U5")
+;use "SKU-NUMBER" from "VENDOR" for ("C2")
+;use "SKU-NUMBER" from "VENDOR" for ("C3")
+;use "SKU-NUMBER" from "VENDOR" for ("C1")
+;use "SKU-NUMBER" from "VENDOR" for ("C4")
+;use "SKU-NUMBER" from "VENDOR" for ("C5")
+;use "SKU-NUMBER" from "VENDOR" for ("U1")
+;use "SKU-NUMBER" from "VENDOR" for ("C6")

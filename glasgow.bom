@@ -1,0 +1,35 @@
+Notes; Description; Instances; Datasheet; References; Manufacturer; MPN; Vendor; SKU; Qty; Price; Cost; Total; $1.46
+Auto Selected; Current-limit switch and D+/D– ESD protection for USB Host ports 6-SOT-23 -40 to 85; U15; https://octopart.com/click/track?ct=datasheets&hlid=30196663&ppid=51761753&sid=370&sig=0f9cef8; U2; Texas Instruments; TPD3S014DBVR; Digi-Key; 296-38835-1-ND; 1; $1.02; $1.02
+Auto Selected; 500-mA, high-PSRR, low-IQ, low-dropout voltage regulator with enable 6-WSON -40 to 125; U8; https://octopart.com/click/track?ct=datasheets&hlid=30182627&ppid=94839425&sid=370&sig=02f110e; U3; Texas Instruments; TLV75533PDRVR; Digi-Key; 296-51807-1-ND; 1; $0.44; $0.44
+No Matching Part; 10.0kΩ resistor with 0402 case package; R6; ; R2; ; ; ; ; 1; ; $0.0
+No Matching Part; 100.0kΩ resistor with 0402 case package; R8, R7; ; R4 R3; ; ; ; ; 2; ; $0.0
+No Matching Part; ; U36; ; U4; ; TLV73312PDRVR; ; ; 1; ; $0.0
+No Matching Part; 24.3kΩ resistor with 0402 case package; R5; ; R1; ; ; ; ; 1; ; $0.0
+No Matching Part; ; U7; ; U5; ; LM3880; ; ; 1; ; $0.0
+No Information; ; C8; ; C2; ; ; ; ; 1; ; $0.0
+No Information; ; C26; ; C3; ; ; ; ; 1; ; $0.0
+No Information; ; C13; ; C1; ; ; ; ; 1; ; $0.0
+No Information; ; C28; ; C4; ; ; ; ; 1; ; $0.0
+No Information; ; C86; ; C5; ; ; ; ; 1; ; $0.0
+No Information; ; J1; ; U1; ; ; ; ; 1; ; $0.0
+No Information; ; C27; ; C6; ; ; ; ; 1; ; $0.0
+
+Errors:
+The instances U15 (U2) were assigned part TPD3S014DBVR, which is available from the following vendors. Please indicate the preferred vendor in the selection document.
+  Digi-Key for $1.02 (SKU = 296-38835-1-ND)
+  Digi-Key for $1.02 (SKU = 296-38835-6-ND)
+The instances U8 (U3) were assigned part TLV75533PDRVR, which is available from the following vendors. Please indicate the preferred vendor in the selection document.
+  Digi-Key for $0.44 (SKU = 296-51807-1-ND)
+  Digi-Key for $0.44 (SKU = 296-51807-6-ND)
+The instances R6 (R2) require electrical model Resistor(10000.0, 1.0, 0.0625) and 0402 case package, but no appropriate part could be found.
+The instances R8 (R4), R7 (R3) require electrical model Resistor(100000.0, 1.0, 0.0625) and 0402 case package, but no appropriate part could be found.
+The instances U36 (U4) were assigned part TLV73312PDRVR, but it is out of stock.
+The instances R5 (R1) require electrical model Resistor(24300.0, 1.0, 0.0625) and 0402 case package, but no appropriate part could be found.
+The instances U7 (U5) were assigned part LM3880, but it is out of stock.
+The instance C8 (C2) has no assigned part.
+The instance C26 (C3) has no assigned part.
+The instance C13 (C1) has no assigned part.
+The instance C28 (C4) has no assigned part.
+The instance C86 (C5) has no assigned part.
+The instance J1 (U1) has no assigned part.
+The instance C27 (C6) has no assigned part.
