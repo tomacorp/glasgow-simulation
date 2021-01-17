@@ -1,0 +1,17 @@
+.title Resistor test circuit
+*
+* Voltage source on connector J1
+.subckt J1 1 2
+V1 1 2 EXP(0 5 10u 10u 20 20)
+.ends
+* Resistor, 1K component R1
+.subckt R1K 1 2
+R1 1 2 1k
+.ends
+XJ1 VIN 0 J1
+XR1 VIN 0 R1K
+*
+.options savecurrents filetype=ascii
+.tran 1u 100u 0 10u
+*
+.end
