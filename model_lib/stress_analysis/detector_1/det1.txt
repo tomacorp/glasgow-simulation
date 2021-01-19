@@ -1,0 +1,36 @@
+
+Circuit: Resistor test circuit
+
+ASCII raw file "det1.raw"
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Warning: v.xj1.v1: no DC value, transient time 0 value used
+No. of Data Columns : 9  
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vin                                          0
+vde                                1.60143e-30
+vout                              -8.00714e-29
+v.xj1.v1#branch                    1.60143e-31
+
+
+No. of Data Rows : 108
+
+Total analysis time (seconds) = 0.002313
+
+Total CPU time (seconds) = 0.006 
+
+Total DRAM available = 7974.898 MB.
+DRAM currently available = 5359.266 MB.
+Maximum ngspice program size =   66.934 MB.
+Current ngspice program size =    7.848 MB.
+
+Shared ngspice pages =    6.941 MB.
+Text (code) pages =    5.453 MB.
+Stack = 0 bytes.
+Library pages =    1.734 MB.
+

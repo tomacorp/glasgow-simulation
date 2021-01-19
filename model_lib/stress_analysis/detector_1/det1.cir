@@ -1,0 +1,40 @@
+.title Resistor test circuit
+*
+* Voltage source on connector J1
+.subckt J1 1 2
+V1 1 2 EXP(0 5 10u 3u 20 20)
+.ends
+*
+* Resistor, 10 Ohm
+.subckt R10 1 2
+R1 1 2 10
+.ends
+*
+* Resistor, 500
+.subckt R500 1 2
+R1 1 2 500
+.ends
+*
+* Capacitor, 10nF
+.subckt C33N 1 2
+C1 1 2 33n
+.ends
+*
+* Diode, simple
+.subckt D1N 1 2
+D1 1 2 D1N9
+.model D1N9 D RS=1 N=1.5
+.ends
+*
+* Main circuit
+XJ1 VIN 0 J1
+XR1 VIN VDE R10
+XD1 VDE VOUT D1N
+XC1 VOUT 0 C33N
+XR2 VOUT 0 R500
+*
+* Control section
+.options savecurrents filetype=ascii
+.tran 1u 100u 0 1u
+*
+.end

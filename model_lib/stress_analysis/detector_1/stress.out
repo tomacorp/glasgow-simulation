@@ -1,0 +1,26 @@
+Peak diode current in D1:
+maxabs(i(@d.xd1.d1[id])) = 3.352570e-02
+Steady state diode current in D1
+(i(@d.xd1.d1[id]))[npt] = 7.706645e-03
+Peak power in diode D1:
+maximum(i(@d.xd1.d1[id])*(v(vde)-v(vout))) = 3.861328e-02
+Steady state power in diode D1:
+i(@d.xd1.d1[id])[npt]*(v(vde)[npt]-v(vout)[npt]) = 8.243112e-03
+Maximum voltage on capacitor C1:
+maxabs(v(vout)) = 3.853323e+00
+Check for steady-state power in capacitor C1:
+(i(@c.xc1.c1[i])*v(vout))[npt] = 2.134982e-14
+Maximum voltage on resistor R1:
+maxabs(v(vout)) = 3.853323e+00
+Maximum power on resistor R1:
+maximum(i(@r.xr1.r1[i])*(v(vin)-v(vde))) = 1.076254e-02
+Steady state power on resistor R1:
+(i(@r.xr1.r1[i])*(v(vin)-v(vde)))[npt] = 5.939238e-04
+Maximum voltage on resistor R2:
+maxabs(v(vout)) = 3.853323e+00
+Maximum power on resistor R2:
+maximum(i(@r.xr2.r1[i])*v(vout)) = 2.969619e-02
+Steady state power on resistor R2:
+(i(@r.xr2.r1[i])*v(vout))[npt] = 2.969619e-02
+Maximum energy imbalance:
+maximum(abs(i(v.xj1.v1)*v(vin)+i(@d.xd1.d1[id])*(v(vde)-v(vout))+i(@c.xc1.c1[i])*v(vout)+i(@r.xr1.r1[i])*(v(vin)-v(vde))+i(@r.xr2.r1[i])*v(vout))) = 8.285653e-04
