@@ -191,8 +191,8 @@ Output:
     v(vout)             : voltage, real, 108 long
 ```
 Graphical output:<br />
-<a img src="detector1/det_voltage_1.png"><br />
-<a img src="detector1/det_current_1.png"><br />
+<a img src="detector_1/det_voltage_1.png"><br />
+<a img src="detector_1/det_current_1.png"><br />
 
 The parts have voltage ratings, current ratings, and power ratings.
 Helper functions in NGSpice make the formulas more readable.
